@@ -3,6 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import fruits from './foods';
+import {choice,remove} from './helpers';
+
+
+let randomFruit = choice(fruits);
+console.log(`I'd like one ${randomFruit}, please`);
+console.log(`Here you go: ${randomFruit}`);
+console.log(`"Delicious! May I have another?`);
+let fruitsLeft = remove(fruits, randomFruit);
+console.log(`I'm sorry, we're all out. We have ${fruitsLeft.length} left`);
+
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>
